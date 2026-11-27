@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/openai/miniF2F",
+  "commit": "4e433ff5cadff23f9911a2bb5bbab2d351ce5554",
+  "source_file": "lean/src/valid.lean",
+  "source_url": "https://github.com/openai/miniF2F/blob/4e433ff5cadff23f9911a2bb5bbab2d351ce5554/lean/src/valid.lean",
+  "source_sha256": "46a8162d75ca3350eaf7843c2af16eb90c15553c70df34e8d2f636547ca26028",
+  "subset_file": "subset.lean3.txt",
+  "subset_sha256": "ab45cc265eaf49998c759a58f7ecf7f9b81f22ce835cb05140fad13ec0e39e89",
+  "selected_theorems": [
+    "amc12a_2019_p21",
+    "amc12a_2015_p10",
+    "amc12a_2008_p8",
+    "mathd_algebra_182",
+    "aime_1984_p5"
+  ],
+  "subset_kind": "verbatim Lean 3 validation statements and original proof bodies; NOT RUN",
+  "license_file": "LICENSE-upstream"
+}

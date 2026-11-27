@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-11-27T04:14:17.683923+00:00",
+  "status": "NOT RUN",
+  "theorems_executed": 0,
+  "theorems_scored": 0,
+  "pass_rate": null,
+  "reason": "Fetched upstream targets Lean 3.42.1 with legacy Mathlib, contains no Lake configuration; installed Lean 4.34.1 has no Mathlib module; supplemental community repository clone failed.",
+  "commands": [
+    {
+      "command": "timeout 90 git clone --depth 1 https://github.com/openai/miniF2F bench/minif2f/upstream",
+      "exit_code": 0,
+      "log": "fetch-openai.log"
+    },
+    {
+      "command": "timeout 90 git clone --depth 1 https://github.com/leanprover-community/miniF2F bench/minif2f/community-upstream",
+      "exit_code": 128,
+      "log": "fetch-community.log"
+    },
+    {
+      "command": "timeout 30 lean +leanprover/lean4:v4.34.1 bench/minif2f/mathlib-probe.lean",
+      "exit_code": 1,
+      "log": "mathlib-probe.log",
+      "role": "dependency probe only"
+    },
+    {
+      "command": "timeout 30 lake +leanprover/lean4:v4.34.1 --dir bench/minif2f/upstream --keep-toolchain update",
+      "exit_code": 1,
+      "log": "lake-update.log",
+      "role": "bounded dependency update attempt; configuration rejected before dependency fetching"
+    }
+  ],
+  "installed_toolchains_observed": [
+    "leanprover/lean4:v4.33.1",
+    "leanprover/lean4:v4.34.1",
+    "leanprover/lean4:v4.36.0-rc2"
+  ],
+  "installed_toolchains_changed": false,
+  "mathlib_fetched": false
+}

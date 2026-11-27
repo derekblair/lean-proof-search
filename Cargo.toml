@@ -1,0 +1,10 @@
+[package]
+name = "lean-proof-search-bench"
+version = "0.1.0"
+edition = "2024"
+publish = false
+autobins = false
+
+[[bin]]
+name = "gen0-bench"
+path = "bench/main.rs"

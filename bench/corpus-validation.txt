@@ -1,0 +1,179 @@
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+Validation command: lean <file>; no explicit imports; no Mathlib.
+
+FILE bench/corpus/bool_not_not.lean
+-- tactic: cases b <;> rfl
+EXIT 0; ELAPSED_MS 189
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/eq_symmetry.lean
+-- tactic: intro h; exact h.symm
+EXIT 0; ELAPSED_MS 183
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/eq_transitivity.lean
+-- tactic: intro hab hbc; exact hab.trans hbc
+EXIT 0; ELAPSED_MS 178
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/exists_witness.lean
+-- tactic: exact ⟨7, rfl⟩
+EXIT 0; ELAPSED_MS 177
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/list_append_nil.lean
+-- tactic: simp
+EXIT 0; ELAPSED_MS 182
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/list_length_append.lean
+-- tactic: simp
+EXIT 0; ELAPSED_MS 183
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/list_nil_append.lean
+-- tactic: rfl
+EXIT 0; ELAPSED_MS 174
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_add_assoc.lean
+-- tactic: omega
+EXIT 0; ELAPSED_MS 178
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_add_cancel.lean
+-- tactic: omega
+EXIT 0; ELAPSED_MS 208
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_add_comm.lean
+-- tactic: omega
+EXIT 0; ELAPSED_MS 229
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_add_zero.lean
+-- tactic: simp
+EXIT 0; ELAPSED_MS 193
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_le_succ.lean
+-- tactic: omega
+EXIT 0; ELAPSED_MS 204
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_lt_succ.lean
+-- tactic: omega
+EXIT 0; ELAPSED_MS 183
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_mul_one.lean
+-- tactic: simp
+EXIT 0; ELAPSED_MS 194
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_numeral_sum.lean
+-- tactic: decide
+EXIT 0; ELAPSED_MS 176
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/nat_zero_add.lean
+-- tactic: simp
+EXIT 0; ELAPSED_MS 193
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/option_map_id.lean
+-- tactic: cases x <;> rfl
+EXIT 0; ELAPSED_MS 175
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/prop_and_comm.lean
+-- tactic: intro h; exact And.intro h.right h.left
+EXIT 0; ELAPSED_MS 193
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/prop_and_left.lean
+-- tactic: intro h; exact h.left
+EXIT 0; ELAPSED_MS 173
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/prop_and_right.lean
+-- tactic: intro h; exact h.right
+EXIT 0; ELAPSED_MS 174
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/prop_false_elim.lean
+-- tactic: intro h; exact False.elim h
+EXIT 0; ELAPSED_MS 171
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/prop_identity.lean
+-- tactic: intro h; exact h
+EXIT 0; ELAPSED_MS 166
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/prop_imp_trans.lean
+-- tactic: intro hp; exact hg (hf hp)
+EXIT 0; ELAPSED_MS 167
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/prop_or_comm.lean
+-- tactic: intro h; exact Or.elim h Or.inr Or.inl
+EXIT 0; ELAPSED_MS 174
+STDOUT:
+
+STDERR:
+
+FILE bench/corpus/prop_or_left.lean
+-- tactic: intro h; exact Or.inl h
+EXIT 0; ELAPSED_MS 199
+STDOUT:
+
+STDERR:
+
+Total: 25/25 accepted by Lean exit status zero.

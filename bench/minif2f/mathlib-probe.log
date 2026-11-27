@@ -1,0 +1,4 @@
+bench/minif2f/mathlib-probe.lean:1:0: error: unknown module prefix 'Mathlib'
+
+No directory 'Mathlib' or file 'Mathlib.olean' in the search path entries:
+/root/.elan/toolchains/leanprover--lean4---v4.34.1/lib/lean
