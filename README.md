@@ -18,6 +18,15 @@ The big automated provers are model-heavy, mostly closed, and glued together in 
 
 Derek's math work today is also one theorem at a time, hand-orchestrated. A proof does not make the next proof easier except through a lessons file. This engine is meant to make it compound, and to make the score legible: a public benchmark score, a Lean-checked proof, and a paper, instead of a PR count.
 
+## Design principles
+
+1. Lean is the arbiter, not the model. A result counts as total or partial Lean verification, and the status is published with the claim. Overnight output goes into a verification queue before it counts.
+2. The harness is the product, not the prompt. The durable edge is the harness, tooling, retries, search, and checking, built by trial and error, not a single clever prompt.
+3. Generate overnight, verify in the morning. Generation is cheap and parallel; verification is the bottleneck, so design around it.
+4. Open source the loop so it compounds. A public, checkable artifact draws contributors and independent extensions; a private demo does not.
+5. Optimize a measurable score. Every generation is scored on the same public benchmarks, by pass rate, time, and cost, so progress is a number, not a feeling.
+6. Prefer a minimal checkable artifact. A smaller, single-file, Lean-checked proof is easier to audit, reproduce, and build on than a large one.
+
 ## Status
 
 Generation 0. Sprint plan in progress. No engine code yet.
