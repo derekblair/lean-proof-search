@@ -5,5 +5,12 @@
 //! that launch subprocesses must enforce their own timeout: this synchronous
 //! interface cannot interrupt a check that is already running.
 
-pub struct CheckResult { pub passed: bool, pub stdout: String, pub stderr: String, pub millis: u64 }
-pub trait ProofChecker { fn check(&self, lean_source: &str) -> CheckResult; }
+pub struct CheckResult {
+    pub passed: bool,
+    pub stdout: String,
+    pub stderr: String,
+    pub millis: u64,
+}
+pub trait ProofChecker {
+    fn check(&self, lean_source: &str) -> CheckResult;
+}
