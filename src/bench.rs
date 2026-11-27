@@ -281,6 +281,8 @@ impl Report {
                 quote_diagnostic(&mut output, "Initial-goal stderr", &goal.stderr);
             }
         }
+        output.truncate(output.trim_end_matches('\n').len());
+        output.push('\n');
         output
     }
 
@@ -352,7 +354,11 @@ fn record_json(result: &TheoremResult) -> String {
 fn quote_diagnostic(output: &mut String, label: &str, diagnostic: &str) {
     writeln!(output, "{label}:\n").expect("writing a String cannot fail");
     for line in diagnostic.lines() {
-        writeln!(output, "    {line}").expect("writing a String cannot fail");
+        if !line.is_empty() {
+            output.push_str("    ");
+            output.push_str(line);
+        }
+        output.push('\n');
     }
     output.push('\n');
 }

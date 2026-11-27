@@ -1,0 +1,55 @@
+   Compiling lean-proof-search-bench v0.1.0 (/root/projects/lean-proof-search-bench)
+    Finished `release` profile [optimized] target(s) in 0.43s
+   Compiling lean-proof-search-bench v0.1.0 (/root/projects/lean-proof-search-bench)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.21s
+     Running unittests bench/main.rs (target/debug/deps/gen0_bench-ac4fe4b97d9a8fce)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/bench_harness.rs (target/debug/deps/bench_harness-afb581616e43453f)
+
+running 8 tests
+test backend_supplied_search_measurements_are_preserved ... ok
+test candidate_rendering_preserves_multiline_tactic_structure ... ok
+test direct_success_records_only_the_executed_check_without_nodes_or_goal_probe ... ok
+test corpus_loading_is_sorted_and_ignores_non_lean_files ... ok
+test json_escapes_controls_quotes_backslashes_and_preserves_unicode ... ok
+test failure_diagnostics_and_initial_goal_have_distinct_outputs_and_timings ... ok
+test timestamped_reports_never_overwrite_existing_results ... ok
+test corpus_rejects_empty_input_and_inconsistent_hints ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/lean_checker.rs (target/debug/deps/lean_checker-818168e3dcaa6c0a)
+
+running 9 tests
+test missing_executable_is_a_failed_check ... ok
+test subprocess::nonzero_exit_cannot_be_overridden_by_success_text ... ok
+test subprocess::streams_larger_than_pipe_buffers_are_captured_and_temporary_source_is_removed ... ok
+test subprocess::timeout_kills_process_and_preserves_output ... ok
+test valid_proof_is_accepted_by_real_lean ... ok
+test incomplete_proof_preserves_exact_goal_diagnostics ... ok
+test simultaneous_checks_use_independent_sources ... ok
+test sorry_and_admit_are_errors_from_lean ... ok
+test subprocess::exited_wrapper_does_not_leave_background_work_running ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.61s
+
+    Checking lean-proof-search-bench v0.1.0 (/root/projects/lean-proof-search-bench)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.11s
+   Compiling lean-proof-search-engine-bench v0.1.0 (/root/projects/lean-proof-search-bench/bench/search)
+    Finished `release` profile [optimized] target(s) in 0.45s
+   Compiling lean-proof-search-engine-bench v0.1.0 (/root/projects/lean-proof-search-bench/bench/search)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.13s
+     Running unittests main.rs (bench/search/target/debug/deps/gen0_search_bench-4d1865dc33d44cc3)
+
+running 2 tests
+test search_adapter::tests::keeps_failure_goal_probe_separate_from_search_nodes ... ok
+test search_adapter::tests::preserves_full_proof_and_search_failure_transcripts ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Checking lean-proof-search-engine-bench v0.1.0 (/root/projects/lean-proof-search-bench/bench/search)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.12s
